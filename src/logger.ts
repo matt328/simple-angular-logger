@@ -1,17 +1,10 @@
 import { Injectable } from '@angular/core';
 import { Level } from './level';
 
-/**
- * Logger options.
- * See {@link Logger}.
- *
- * level - How much detail you want to see in the logs, 0 being off, 1 being the less detailed, 5 being the most. Defaults to LOG.
- */
 export class Options {
   level: Level;
 }
 
-// For browsers that don't implement the debug method, log will be used instead. Fixes #62.
 const CONSOLE_DEBUG_METHOD = console['debug'] ? 'debug' : 'log';
 
 const DEFAULT_OPTIONS: Options = {

@@ -22,11 +22,16 @@
     "email": "matt328@gmail.com"
   },
   "keywords": [
-    "angular"
+    "angular",
+    "logger"
   ],
   "license": "UNLICENSED",
   "bugs": {
     "url": "https://github.com/matt328/simple-angular-logger/issues"
+  },
+  "peerDependencies": {
+    "@angular/common": "^4.2.5",
+    "@angular/core": "^4.2.5"
   },
   "devDependencies": {
     "@angular/common": "^4.2.5",

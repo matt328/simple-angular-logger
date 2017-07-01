@@ -1,6 +1,7 @@
 # simple-angular-logger
 
-Simple logging facade for Angular supporting build-time environment specific options and, most importantly, AOT.
+Simple logging facade for Angular 4 supporting build-time environment specific options and, most importantly, AOT.
+Use it as-is, or as a base to build out your own logging needs.
 
 ## Installation
 
@@ -15,7 +16,7 @@ Reasoning for this is so that you can have environment specific options, IE thos
 or some other mechanism that injects globals into your code at build time, and still be ok with Angular's AOT compiler.
 
 The code is heavily inspired by other loggers for Angular, only this one is packaged properly according to the Angular
-guidelines, and works with AOT.
+guidelines and works with AOT.
 
 Import and configure it:
 
@@ -76,4 +77,4 @@ export class MyService {
 
 ## License
 
-Do whatever you want with it, it's like 15 lines of code.
+Do whatever you want, it's like 15 lines of code.
