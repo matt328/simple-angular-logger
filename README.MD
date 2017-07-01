@@ -15,7 +15,7 @@ You can configure the logger via the module's `forRoot` function by passing a fu
 Reasoning for this is so that you can have environment specific options, IE those that rely on something like Webpack defines
 or some other mechanism that injects globals into your code at build time, and still be ok with Angular's AOT compiler.
 
-The code is heavily inspired by other loggers for Angular, only this one is packaged properly according to the Angular
+The code is heavily inspired by other loggers for Angular, but this one is packaged properly according to the Angular
 guidelines and works with AOT.
 
 Import and configure it:
