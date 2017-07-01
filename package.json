@@ -1,6 +1,6 @@
 {
   "name": "simple-angular-logger",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "module": "simple-angular-logger.js",
   "typings": "simple-angular-logger.d.ts",
   "scripts": {
