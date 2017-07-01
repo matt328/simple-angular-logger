@@ -8,15 +8,7 @@ To install this library, run:
 $ npm install simple-angular-logger --save
 ```
 
-## Consuming your library
-
-Once you have published your library to npm, you can import your library in any Angular application by running:
-
-```bash
-$ npm install simple-angular-logger
-```
-
-and then from your Angular `AppModule`:
+Angular `AppModule`:
 
 ```typescript
 import { BrowserModule } from '@angular/platform-browser';
@@ -24,8 +16,17 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
-// Import your library
-import { SampleModule } from 'simple-angular-logger';
+// Import the library
+import { LoggerModule, Options, Level } from 'simple-angular-logger';
+
+export function loggerOptions(): Options {
+  if (ENV === 'production') {
+    return { level: Level.WARN };
+  }
+  if (ENV === 'development') {
+    return { level: Level.LOG };
+  }
+}
 
 @NgModule({
   declarations: [
@@ -34,8 +35,7 @@ import { SampleModule } from 'simple-angular-logger';
   imports: [
     BrowserModule,
 
-    // Specify your library as an import
-    LibraryModule
+    LoggerModule.forRoot(loggerOptions),
   ],
   providers: [],
   bootstrap: [AppComponent]
