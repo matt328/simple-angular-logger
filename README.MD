@@ -17,7 +17,7 @@ or some other mechanism that injects globals into your code at build time, and s
 The code is heavily inspired by other loggers for Angular, only this one is packaged properly according to the Angular
 guidelines, and works with AOT.
 
-Angular `AppModule`:
+Import and configure it:
 
 ```typescript
 import { BrowserModule } from '@angular/platform-browser';
@@ -43,7 +43,6 @@ export function loggerOptions(): Options {
   ],
   imports: [
     BrowserModule,
-
     LoggerModule.forRoot(loggerOptions),
   ],
   providers: [],
@@ -52,6 +51,29 @@ export function loggerOptions(): Options {
 export class AppModule { }
 ```
 
+Use it:
+
+```typescript
+import { Injectable } from '@angular/core';
+import { Logger } from 'simple-angular-logger';
+
+@Injectable()
+export class MyService {
+
+  constructor(
+    private log: Logger
+  ) { }
+
+  private someMethod() {
+    this.log.log('Here is a log statement');
+    this.log.debug('Here is a debug statement');
+    this.log.info('Here is a info statement');
+    this.log.warn('Here is a warn statement');
+    this.log.error('Here is a error statement');
+  }
+}
+```
+
 ## License
 
-MIT © [Matt Teeter](matt328@gmail.com)
+Do whatever you want with it, it's like 15 lines of code.
