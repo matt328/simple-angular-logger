@@ -1,6 +1,6 @@
 {
   "name": "simple-angular-logger",
-  "version": "1.0.4",
+  "version": "0.0.0-development",
   "module": "simple-angular-logger.js",
   "typings": "simple-angular-logger.d.ts",
   "scripts": {
@@ -11,7 +11,12 @@
     "docs:serve": "npm run docs:build -- -s",
     "docs:watch": "npm run docs:build -- -s -w",
     "lint": "tslint --type-check --project tsconfig.json src/**/*.ts",
-    "test": "echo 'Testing'"
+    "test": "echo 'Testing'",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
+    "commit": "git-cz"
+  },
+  "czConfig": {
+    "path": "node_modules/cz-conventional-changelog"
   },
   "repository": {
     "type": "git",
@@ -44,7 +49,9 @@
     "@types/jasmine": "^2.5.53",
     "@types/node": "^8.0.7",
     "codelyzer": "^3.1.1",
+    "commitizen": "^2.9.6",
     "core-js": "^2.4.1",
+    "cz-conventional-changelog": "^2.0.0",
     "del": "^3.0.0",
     "gulp": "^3.9.1",
     "gulp-rename": "^1.2.2",
@@ -64,6 +71,8 @@
     "rollup": "^0.43.0",
     "run-sequence": "^2.0.0",
     "rxjs": "^5.1.0",
+    "semantic-release": "^8.0.3",
+    "semantic-release-cli": "^3.2.0",
     "ts-node": "^3.1.0",
     "tslint": "^5.4.3",
     "typescript": "^2.4.1",
