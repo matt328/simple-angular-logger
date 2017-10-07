@@ -12,7 +12,7 @@
     "docs:watch": "npm run docs:build -- -s -w",
     "lint": "tslint --type-check --project tsconfig.json src/**/*.ts",
     "test": "echo 'Testing...again'",
-    "semantic-release": "yarn build && semantic-release pre && npm publish dist && semantic-release post",
+    "semantic-release": "yarn build && semantic-release pre && cp package.json dist/package.json && npm publish dist && semantic-release post",
     "commit": "git-cz"
   },
   "czConfig": {
