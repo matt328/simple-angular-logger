@@ -1,5 +1,7 @@
 # simple-angular-logger
 
+[![Build Status](https://travis-ci.org/matt328/simple-angular-logger.svg?branch=master)](https://travis-ci.org/matt328/simple-angular-logger)
+
 Simple logging facade for Angular 4 supporting build-time environment specific options and, most importantly, AOT.
 Use it as-is, or as a base to build out your own logging needs.
 
